@@ -36,9 +36,9 @@ resource "aws_iam_role_policy" "lambda" {
 }
 
 data "archive_file" "lambda" {
-  for_each    = fileset("../src/lambdas", "*.js")
+  for_each    = fileset("./src/lambdas", "*.js")
   type        = "zip"
-  source_file = "../src/lambdas/${basename(each.value)}"
+  source_file = "./src/lambdas/${basename(each.value)}"
   output_path = "${replace(basename(each.value), ".js", "")}.zip"
 }
 

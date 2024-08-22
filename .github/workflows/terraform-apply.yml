@@ -9,11 +9,10 @@ env:
   TF_CLOUD_ORGANIZATION: "jergauth-terraform-playground"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "learn-terraform-github-actions"
-  CONFIG_DIRECTORY: "./infra"
+  CONFIG_DIRECTORY: "./"
 
 jobs:
   terraform:
-    # if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
     name: "Terraform Apply"
     runs-on: ubuntu-latest
     permissions:
