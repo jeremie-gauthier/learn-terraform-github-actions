@@ -1,5 +1,5 @@
 const handler = async () => {
-  return "Hi jergauth!";
+  return "Hello World!";
 };
 
 module.exports = {
